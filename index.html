@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+<head>
+
+    <title>Wall Application</title>
+    <link rel="stylesheet" href="css/cssreset-min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--[if IE]>
+    <script src="lib/ie.js"></script>
+    <![endif]-->
+</head>
+<body id="ng-app" ng-app="wall">
+    <div ng-controller="wallAppController" class="appControler">
+        <form class="search-form" ng-submit="submitSearch()">
+            SEARCH : <input type="text" ng-model="searchTag"/>
+            <button class="btn" type="submit" value="search">SEARCH</button>
+        </form>
+        <div class="searchTagsContainer">
+            <div ng-repeat="searchTagItem in searchTagItems" class="searchTagElement">
+                <a href="" ng-click="desactivateTopic(searchTagItem.label)">{{searchTagItem.label}}</a>
+                <a href="" ng-click="deleteTopic(searchTagItem.label)">X</a>
+            </div>
+        </div>
+        <div class="wallContainer" when-scrolled="submitSearch()">
+            <div id="container" class="transitions-enabled masonry" >
+                <div ng-repeat="wallItem in items" class="transitions-enabled masonry-item {{wallItem.type}} {{wallItem.searchTag}}">
+                    <div ng-include src="wallItem.template"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--[if lt IE 8]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.4/json3.min.js"></script>
+<![endif]-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="lib/jquery/jquery.masonry.js"></script>
+<!--<script src="lib/jquery/jquery.nested.js"></script>-->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="js/controllers/WallCtrl.js"></script>
+<script src="js/models/WallModel.js"></script>
+<script src="js/directives/MasonryDirective.js"></script>
+<script src="js/directives/MasonryItemDirective.js"></script>
+<script src="js/directives/WhenScrolledDirective.js"></script>
+<script src="js/services/flickrServices.js"></script>
+<script src="js/filters/DesactivateTopicFilter.js"></script>
+<script src="js/WallApp.js"></script>
+</html>

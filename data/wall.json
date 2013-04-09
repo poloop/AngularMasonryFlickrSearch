@@ -1,0 +1,32 @@
+[
+    {
+        "id" : "item 0",
+        "name" : "label item 0",
+        "imageUrl" : "/images/img_0.jpg"
+    },
+    {
+        "id" : "item 1",
+        "name" : "label item 1",
+        "imageUrl" : "/images/img_1.jpg"
+    },
+    {
+        "id" : "item 2",
+        "name" : "label item 2",
+        "imageUrl" : "/images/img_2.jpg"
+    },
+    {
+        "id" : "item 3",
+        "name" : "label item 3",
+        "imageUrl" : "/images/img_3.jpg"
+    },
+    {
+        "id" : "item 4",
+        "name" : "label item 4",
+        "imageUrl" : "/images/img_4.gif"
+    },
+    {
+        "id" : "item 5",
+        "name" : "label item 5",
+        "imageUrl" : "/images/img_5.jpg"
+    }
+]

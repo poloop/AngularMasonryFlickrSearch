@@ -1,0 +1,80 @@
+body, html
+{
+    margin: 10px;
+    font-family: Arial;
+    font-size: 12px;
+    height: 100%;
+}
+
+.appControler
+{
+    height: 100%;
+}
+
+.masonry
+{
+    width: 100%;
+    clear: both;
+    margin: 0 auto;
+}
+
+.masonry-item {
+    margin: 10px;
+    float: left;
+    border: solid 1px;
+}
+
+.topic-item {
+    width: 240px;
+    height: 180px;
+    background: lightblue;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.searchTagElement
+{
+    display: inline-block;
+    background: lightslategrey;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/**** Transitions ****/
+
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-item {
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -ms-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.transitions-enabled.masonry  .masonry-item {
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+}
+
+.masonry-item img
+{
+    height: auto;
+}
+
+.labelItem {
+    max-width: 200px;
+}
