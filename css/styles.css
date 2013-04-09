@@ -43,6 +43,16 @@ body, html
     font-weight: bold;
 }
 
+.searchTagElement.activate
+{
+    background-color: lightslategrey;
+}
+
+.searchTagElement.desactivate
+{
+    background-color: lightsalmon;
+}
+
 /**** Transitions ****/
 
 .transitions-enabled.masonry,

@@ -16,14 +16,14 @@
             <button class="btn" type="submit" value="search">SEARCH</button>
         </form>
         <div class="searchTagsContainer">
-            <div ng-repeat="searchTagItem in searchTagItems" class="searchTagElement">
+            <div ng-repeat="searchTagItem in searchTagItems" class="searchTagElement {{searchTagItem.state}}">
                 <a href="" ng-click="desactivateTopic(searchTagItem.label)">{{searchTagItem.label}}</a>
                 <a href="" ng-click="deleteTopic(searchTagItem.label)">X</a>
             </div>
         </div>
         <div class="wallContainer" when-scrolled="submitSearch()">
             <div id="container" class="transitions-enabled masonry" >
-                <div ng-repeat="wallItem in items" class="transitions-enabled masonry-item {{wallItem.type}} {{wallItem.searchTag}}">
+                <div ng-repeat="wallItem in items|desactivateTopic:topic" class="transitions-enabled masonry-item {{wallItem.type}} {{wallItem.searchTag}}">
                     <div ng-include src="wallItem.template"></div>
                 </div>
             </div>

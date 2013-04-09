@@ -15,6 +15,8 @@ module wall {
         items: WallItem[];
         searchTagItems : SearchTagItem[];
 
+        topic : string;
+
         parse: ng.IParseService;
         compile: ng.ICompileService;
 

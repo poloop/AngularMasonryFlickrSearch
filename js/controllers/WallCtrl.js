@@ -8,6 +8,7 @@ var wall;
             this.filter = $filter;
             this.flickrServices = flickrServices;
             this.scope.searchTagItems = [];
+            this.scope.topic = '';
             $scope.deleteTopic = function (value) {
                 return _this.deleteTopic(value);
             };
@@ -69,16 +70,23 @@ var wall;
             $('.masonry').masonry('reload');
         };
         WallCtrl.prototype.desactivateTopic = function (value) {
-            var data = this.scope.items;
-            this.filter('filter')(this.scope.items, function () {
-                var arr = [];
-                for(var i = 0; i < data.length; i++) {
-                    if(data[i].searchTag != value) {
-                        arr.push(data[i]);
-                    }
+            var searchTagItem = this.getSearchTagItemByLabel(value);
+            if(searchTagItem.state == 'activate') {
+                searchTagItem.state = 'desactivate';
+                this.scope.topic = value;
+            } else {
+                searchTagItem.state = 'activate';
+                this.scope.topic = '';
+            }
+            console.log("desactivateTopic");
+        };
+        WallCtrl.prototype.getSearchTagItemByLabel = function (value) {
+            for(var i = 0; i < this.scope.searchTagItems.length; i++) {
+                if(this.scope.searchTagItems[i].label == value) {
+                    return this.scope.searchTagItems[i];
                 }
-                return arr;
-            });
+            }
+            return undefined;
         };
         WallCtrl.prototype.getAllItems = function (successCallback, tags) {
             console.log(this.flickrServices.getName());

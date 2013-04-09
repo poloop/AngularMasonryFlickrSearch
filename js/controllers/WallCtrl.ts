@@ -35,6 +35,8 @@ module wall {
             this.filter = $filter;
             this.flickrServices = flickrServices;
             this.scope.searchTagItems = [];
+
+            this.scope.topic = '';
             //this.refreshWall($scope);
 
             $scope.deleteTopic = (value: string) => this.deleteTopic(value);
@@ -92,14 +94,29 @@ module wall {
         }
 
         desactivateTopic(value: string) {
-            var data = this.scope.items;
-            this.filter('filter')(this.scope.items, function(){
-                var arr = [];
-                for(var i = 0; i < data.length; i++) {
-                    if(data[i].searchTag != value) arr.push(data[i]);
-                }
-                return arr;
-            });
+
+            var searchTagItem = this.getSearchTagItemByLabel(value);
+            if(searchTagItem.state == 'activate')
+            {
+                searchTagItem.state = 'desactivate';
+                this.scope.topic = value;
+            } else
+            {
+                searchTagItem.state = 'activate';
+                this.scope.topic = '';
+            }
+            //$('.masonry').masonry('reload');
+            //this.filter('desactivateTopic')(this.scope.items, value);
+            console.log("desactivateTopic");
+        }
+
+        getSearchTagItemByLabel(value : string) : SearchTagItem
+        {
+            for(var i = 0; i < this.scope.searchTagItems.length; i++)
+            {
+                if(this.scope.searchTagItems[i].label == value) return this.scope.searchTagItems[i];
+            }
+            return undefined
         }
 
         getAllItems(successCallback : Function, tags ?: string): void

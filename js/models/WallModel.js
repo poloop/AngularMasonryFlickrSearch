@@ -11,7 +11,9 @@ var wall;
     })();
     wall.WallItem = WallItem;    
     var SearchTagItem = (function () {
-        function SearchTagItem() { }
+        function SearchTagItem() {
+            this.state = "activate";
+        }
         return SearchTagItem;
     })();
     wall.SearchTagItem = SearchTagItem;    

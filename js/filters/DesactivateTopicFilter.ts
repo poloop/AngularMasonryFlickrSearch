@@ -10,27 +10,37 @@
 module wall {
     'use strict';
 
-    export class DesactivateTopicFilter {
+    export class DesactivateTopicFilter{
 
         private scope: IWallScope;
-        private filter: ng.IFilterService;
 
         public injection(): any[] {
             return [
-                '$filter',
-                ($filter : ng.IFilterService) => { return new DesactivateTopicFilter($filter); }
+                () => { return new DesactivateTopicFilter(); }
             ]
         }
 
         constructor(
-                $filter : ng.IFilterService
             ) {
-            this.filter = $filter;
             return this.execute;
         }
 
-        execute() {
+        execute(items : WallItem[], value : string = '') : any[] {
+            console.log("DesactivateTopicFilter : execute");
 
+            var arr = [];
+
+            var data = items;
+            if(data == undefined) return arr;
+            for(var i = 0; i < data.length; i++) {
+                if(data[i].searchTag != value) arr.push(data[i]);
+            }
+            if(arr.length < items.length)
+            {
+                $('.masonry').masonry('remove', $('.' + value));
+                $('.masonry').masonry('reload');
+            }
+            return arr;
         }
     }
 }

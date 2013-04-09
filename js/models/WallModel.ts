@@ -23,5 +23,6 @@ module wall {
 
     export class SearchTagItem {
         label : string;
+        state : string = "activate";
     }
 }

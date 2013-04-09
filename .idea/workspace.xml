@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61d21cf4-601a-4699-b65c-ffef162b8f76" name="Default" comment="" />
+    <list default="true" id="61d21cf4-601a-4699-b65c-ffef162b8f76" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js.map" afterPath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js" afterPath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts" afterPath="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interfaces/IWallScope.js.map" afterPath="$PROJECT_DIR$/js/interfaces/IWallScope.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interfaces/IWallScope.ts" afterPath="$PROJECT_DIR$/js/interfaces/IWallScope.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/WallCtrl.js.map" afterPath="$PROJECT_DIR$/js/controllers/WallCtrl.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/WallCtrl.js" afterPath="$PROJECT_DIR$/js/controllers/WallCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/WallCtrl.ts" afterPath="$PROJECT_DIR$/js/controllers/WallCtrl.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/WallModel.js.map" afterPath="$PROJECT_DIR$/js/models/WallModel.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/WallModel.js" afterPath="$PROJECT_DIR$/js/models/WallModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/WallModel.ts" afterPath="$PROJECT_DIR$/js/models/WallModel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="TEST_HOME.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365499712570" ignored="false" />
+    <file path="/index.html" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365519430910" ignored="false" />
     <file path="/WallApp.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365440872844" ignored="false" />
-    <file path="/WallCtrl.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365439353956" ignored="false" />
-    <file path="/styles.css" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364479887680" ignored="false" />
-    <file path="/WallModel.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365154016058" ignored="false" />
+    <file path="/WallCtrl.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365519878307" ignored="false" />
+    <file path="/styles.css" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365516763741" ignored="false" />
+    <file path="/WallModel.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365516604398" ignored="false" />
     <file path="/angular.d.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363879127556" ignored="false" />
     <file path="/wall.json" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363687442599" ignored="false" />
     <file path="$PROJECT_DIR$/../../../LIBS_HTML5/todomvc/labs/architecture-examples/typescript-angular/index.html" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363699929664" ignored="false" />
@@ -31,8 +46,7 @@
     <file path="/jquery.masonry.d.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363970673998" ignored="false" />
     <file path="/jquery.imagesloaded.d.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363804068441" ignored="false" />
     <file path="$PROJECT_DIR$/js/directives/MasonryDirective.js.map" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364471204517" ignored="false" />
-    <file path="$PROJECT_DIR$/js/directives/MasonryDirective.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364482819197" ignored="false" />
-    <file path="/IWallScope.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364482701949" ignored="false" />
+    <file path="/IWallScope.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365515906939" ignored="false" />
     <file path="/_all.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365499683026" ignored="false" />
     <file path="/angular-resource.d.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363878831556" ignored="false" />
     <file path="/jquery.masonry.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1363961620705" ignored="false" />
@@ -43,13 +57,8 @@
     <file path="/jquery.nested.d.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364469042711" ignored="false" />
     <file path="$PROJECT_DIR$/js/directives/MasonryItemDirective.js.map" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365434594098" ignored="false" />
     <file path="$PROJECT_DIR$/js/directives/WhenScrolledDirective.js.map" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364469504329" ignored="false" />
-    <file path="$PROJECT_DIR$/js/directives/MasonryItemDirective.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365434594098" ignored="false" />
-    <file path="$PROJECT_DIR$/js/directives/WhenScrolledDirective.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1364482819197" ignored="false" />
-    <file path="$PROJECT_DIR$/js/WallApp.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365442272389" ignored="false" />
-    <file path="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365499764970" ignored="false" />
-    <file path="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js.map" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365499608568" ignored="false" />
-    <file path="/DesactivateTopicFilter.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365499552788" ignored="false" />
-    <file path="/Dummy.txt" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365501011699" ignored="false" />
+    <file path="/DesactivateTopicFilter.ts" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365522152296" ignored="false" />
+    <file path="/Dummy.txt" changelist="61d21cf4-601a-4699-b65c-ffef162b8f76" time="1365518334268" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +81,7 @@
       <file leaf-file-name="WallCtrl.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controllers/WallCtrl.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="3115" selection-end="3115" vertical-scroll-proportion="0.33333334">
+            <state line="107" column="14" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.8139963">
               <folding />
             </state>
           </provider>
@@ -99,16 +108,7 @@
       <file leaf-file-name="DesactivateTopicFilter.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="39" selection-start="244" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlickrServices.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/services/FlickrServices.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="37" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,7 +126,7 @@
       <file leaf-file-name="WallModel.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/WallModel.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="26" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+            <state line="25" column="36" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +135,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+            <state line="42" column="22" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -144,7 +144,7 @@
       <file leaf-file-name="IWallScope.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/interfaces/IWallScope.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="43" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+            <state line="17" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +153,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="10" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-7.1923075">
+            <state line="9" column="16" selection-start="286" selection-end="286" vertical-scroll-proportion="0.46153846">
               <folding />
             </state>
           </provider>
@@ -165,6 +165,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -180,16 +183,16 @@
         <option value="$PROJECT_DIR$/lib/angular/angular.d.ts" />
         <option value="$PROJECT_DIR$/lib/jquery/jquery.nested.d.ts" />
         <option value="$PROJECT_DIR$/js/directives/MasonryDirective.ts" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/js/models/WallModel.ts" />
         <option value="$PROJECT_DIR$/js/directives/MasonryItemDirective.ts" />
-        <option value="$PROJECT_DIR$/js/interfaces/IWallScope.ts" />
         <option value="code.jquery.com/jquery.js" />
+        <option value="$PROJECT_DIR$/js/_all.ts" />
+        <option value="$PROJECT_DIR$/js/WallApp.ts" />
+        <option value="$PROJECT_DIR$/js/interfaces/IWallScope.ts" />
+        <option value="$PROJECT_DIR$/js/models/WallModel.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/controllers/WallCtrl.ts" />
         <option value="$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts" />
-        <option value="$PROJECT_DIR$/js/_all.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/WallApp.ts" />
       </list>
     </option>
   </component>
@@ -287,10 +290,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlickrServices.ts" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -405,14 +404,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -491,7 +490,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16130732" sideWeight="0.22308546" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16236162" sideWeight="0.6315205" order="0" side_tool="false" content_ui="combo" />
@@ -568,13 +567,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/controllers/WallCtrl.ts</url>
-          <line>100</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog>
           <selected-grouping-rules>
@@ -582,27 +574,10 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="81" />
+      <option name="time" value="88" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.nested.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="31" selection-start="6244" selection-end="6244" vertical-scroll-proportion="0.34854016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/WallCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="10" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.53038675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://code.jquery.com/jquery.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -615,51 +590,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/interfaces/IWallScope.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/WallModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/directives/WhenScrolledDirective.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="24" selection-start="438" selection-end="438" vertical-scroll-proportion="0.40515652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/directives/MasonryDirective.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="15" selection-start="1232" selection-end="1232" vertical-scroll-proportion="1.0939226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/FlickrServices.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/directives/MasonryItemDirective.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="244" selection-end="266" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -671,9 +604,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/services/FlickrServices.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="10" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-7.1923075">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.25230202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/directives/MasonryDirective.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="15" selection-start="1232" selection-end="1232" vertical-scroll-proportion="1.0313076">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/angular/angular.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="8" selection-start="9485" selection-end="9485" vertical-scroll-proportion="0.427256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/directives/MasonryItemDirective.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interfaces/IWallScope.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="22" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -685,9 +653,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/filters/DesactivateTopicFilter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/WallModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="36" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="286" selection-end="286" vertical-scroll-proportion="0.46153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/WallCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="56" selection-start="541" selection-end="541" vertical-scroll-proportion="0.4383057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/WallCtrl.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="3115" selection-end="3115" vertical-scroll-proportion="0.33333334">
+        <state line="107" column="14" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.8139963">
           <folding />
         </state>
       </provider>
