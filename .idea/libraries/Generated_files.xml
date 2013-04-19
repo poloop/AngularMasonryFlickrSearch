@@ -8,10 +8,11 @@
         <item url="file://$PROJECT_DIR$/js/models/WallModel.js" />
         <item url="file://$PROJECT_DIR$/js/controllers/WallCtrl.js" />
         <item url="file://$PROJECT_DIR$/js/directives/MasonryItemDirective.js" />
+        <item url="file://$PROJECT_DIR$/js/directives/AddMasonryImageDirective.js" />
         <item url="file://$PROJECT_DIR$/js/interfaces/IWallScope.js" />
         <item url="file://$PROJECT_DIR$/js/_all.js" />
-        <item url="file://$PROJECT_DIR$/js/directives/MasonryDirective.js" />
         <item url="file://$PROJECT_DIR$/js/services/FlickrServices.js" />
+        <item url="file://$PROJECT_DIR$/js/directives/MasonryDirective.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -20,10 +21,11 @@
       <root url="file://$PROJECT_DIR$/js/filters/DesactivateTopicFilter.js" />
       <root url="file://$PROJECT_DIR$/js/models/WallModel.js" />
       <root url="file://$PROJECT_DIR$/js/controllers/WallCtrl.js" />
+      <root url="file://$PROJECT_DIR$/js/directives/AddMasonryImageDirective.js" />
       <root url="file://$PROJECT_DIR$/js/directives/MasonryItemDirective.js" />
       <root url="file://$PROJECT_DIR$/js/interfaces/IWallScope.js" />
-      <root url="file://$PROJECT_DIR$/js/services/FlickrServices.js" />
       <root url="file://$PROJECT_DIR$/js/directives/MasonryDirective.js" />
+      <root url="file://$PROJECT_DIR$/js/services/FlickrServices.js" />
       <root url="file://$PROJECT_DIR$/js/_all.js" />
     </CLASSES>
     <SOURCES />

@@ -14,9 +14,11 @@ module wall {
         .directive('masonry', MasonryDirective.prototype.injection())
         .directive('masonryItem', MasonryItemDirective.prototype.injection())
         .directive('whenScrolled', WhenScrolledDirective.prototype.injection())
+        .directive('addMasonry', AddMasonryImageDirective.prototype.injection())
         .filter('desactivateTopic', DesactivateTopicFilter.prototype.injection())
         .service('flickrServices', FlickrServices.prototype.injection())
         .controller('wallAppController', WallCtrl.prototype.injection());
+
 
     /*wallApp.directive('masonry', function ($parse) {
         return {

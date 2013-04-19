@@ -28,11 +28,11 @@ module wall {
 
         linkFn($scope : IWallScope, element : JQuery, attributes : any) : any {
             var raw = element[0];
-            console.log('WhenScrolledDirective');
+            //console.log('WhenScrolledDirective');
             $(window).bind('scroll', function() {
-                console.log('scroll ' + ' ' + $(window).scrollTop() + ' ' + $(window).height() + ' ' + raw.scrollHeight);
+                //console.log('scroll ' + ' ' + $(window).scrollTop() + ' ' + $(window).height() + ' ' + raw.scrollHeight);
                 if($(window).scrollTop() + $(window).height() >= raw.scrollHeight) {
-                    console.log('WhenScrolledDirective apply');
+                    //console.log('WhenScrolledDirective apply');
                     //$scope.$apply(attributes.whenScrolled);
                 }
             });

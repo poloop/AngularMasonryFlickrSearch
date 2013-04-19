@@ -11,6 +11,11 @@ body, html
     height: 100%;
 }
 
+.wallContainer
+{
+    height: auto;
+}
+
 .masonry
 {
     width: 100%;
@@ -41,6 +46,11 @@ body, html
     border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+         -o-transition: all 1s ease;
+            transition: all 1s ease;
 }
 
 .searchTagElement.activate
@@ -53,15 +63,24 @@ body, html
     background-color: lightsalmon;
 }
 
+.masonry-item img
+{
+    height: auto;
+}
+
+.labelItem {
+    max-width: 200px;
+}
+
 /**** Transitions ****/
 
 .transitions-enabled.masonry,
 .transitions-enabled.masonry .masonry-item {
-    -webkit-transition-duration: 0.7s;
-    -moz-transition-duration: 0.7s;
-    -ms-transition-duration: 0.7s;
-    -o-transition-duration: 0.7s;
-    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 
 .transitions-enabled.masonry {
@@ -79,12 +98,68 @@ body, html
     -o-transition-property: all;
     transition-property: all;
 }
-
-.masonry-item img
-{
-    height: auto;
+/*
+.transitionItem-show-setup,
+.transitionItem-hide-setup {
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
 }
 
-.labelItem {
-    max-width: 200px;
+.transitionItem-show-setup {
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
+
+.transitionItem-show-start {
+    opacity: 1;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+}
+
+.transitionItem-hide-setup {
+    opacity: 1;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+}
+
+.transitionItem-hide-start {
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
+*/
+.tagitem-enter-setup {
+    -webkit-transition: all 5s ease;
+       -moz-transition: all 5s ease;
+        -ms-transition: all 5s ease;
+         -o-transition: all 5s ease;
+            transition: all 5s ease;
+}
+
+.tagitem-leave-setup {
+    -webkit-transition: all 5s ease;
+       -moz-transition: all 5s ease;
+        -ms-transition: all 5s ease;
+         -o-transition: all 5s ease;
+            transition: all 5s ease;
+}
+
+.tagitem-enter-setup {
+    opacity: 0;
+}
+
+.tagitem-enter-setup.tagitem-enter-start {
+    opacity: 1;
+}
+
+.tagitem-leave-setup {
+    opacity: 1;
+}
+
+.tagitem-leave-setup.tagitem-leave-start {
+    opacity: 0;
 }

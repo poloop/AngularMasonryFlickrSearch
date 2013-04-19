@@ -43,48 +43,37 @@ module wall {
 
         compileFn(tElement : JQuery, tAttributes : any, transclude : bool) {
             return {
-                pre : ($scope : ng.IScope, iElement : JQuery, attributes : any) => this.preLinkFn($scope, iElement, attributes),
-                post : ($scope : ng.IScope, iElement : JQuery, attributes : any) => this.postLinkFn($scope, iElement, attributes)
+                pre : ($scope : any, iElement : JQuery, attributes : any) => this.preLinkFn($scope, iElement, attributes),
+                post : ($scope : any, iElement : JQuery, attributes : any) => this.postLinkFn($scope, iElement, attributes)
             }
         }
 
-        preLinkFn($scope : ng.IScope, element : JQuery, attributes : any) : any {
+        preLinkFn($scope : any, element : JQuery, attributes : any) : any {
 
         }
 
-        postLinkFn($scope : ng.IScope, element : JQuery, attributes : any) : any {
-            //console.log('MasonryItemDirective postLink');
+        postLinkFn($scope : any, element : JQuery, attributes : any) : any {
+            
             element.css({opacity : 0});
+            //$('.masonry').masonry('appended', element, false);
+            
 
-            element.html( this.$compile( element.html() )($scope) );
             var timeout = this.timeout;
-            //element.parents('.masonry').append(element).masonry('appended', element, true);
-            element.parents('.masonry').masonry('appended', element, true);
-            element.imagesLoaded(function () {
-                timeout(function() {
-                    //console.log('imageLoaded ' + element.parent());
+            $scope.onLoadTemplate = function() {
+                console.log("MasonryItemDirective :: onLoadTemplate " + $scope.wallItem.type);
+                if($scope.wallItem.type == "topic-item")
+                {
                     element.css({opacity : 1});
-                    element.parents('.masonry').masonry('reload');
-                }, 1000);
-            });
+                }
+                
+            }
+
 
         }
 
-        linkFn($scope : ng.IScope, element : JQuery, attributes : any) : any {
+        linkFn($scope : any, element : JQuery, attributes : any) : any {
             console.log('MasonryItemDirective link');
-            /*
-            element.hide();
-            element.html( this.compile( element.html() )($scope) );
-            //elem.parents('.masonry').masonry('destroy');
-            element.imagesLoaded(function () {
-                $timeout(function() {
-                    //console.log('imageLoaded ' + elem.parent());
-                    element.show();
-                    element.parents('.masonry').masonry('reload');
-
-                }, 2000);
-            });
-            */
+            
         }
     }
 }

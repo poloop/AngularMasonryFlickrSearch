@@ -41,6 +41,7 @@ module wall {
                 //columnWidth: this.parse(attributes.masonry)($scope)
                 //isAnimated: true
             });
+
             /*
             element.nested({
                 selector: '.masonry-item',

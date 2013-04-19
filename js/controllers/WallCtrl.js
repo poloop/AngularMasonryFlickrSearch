@@ -8,7 +8,7 @@ var wall;
             this.filter = $filter;
             this.flickrServices = flickrServices;
             this.scope.searchTagItems = [];
-            this.scope.topic = '';
+            this.scope.topic = [];
             $scope.deleteTopic = function (value) {
                 return _this.deleteTopic(value);
             };
@@ -18,8 +18,10 @@ var wall;
             $scope.submitSearch = function () {
                 return _this.submitSearch();
             };
+            $scope.onLoadedImage = function () {
+                return _this.onLoadedImage();
+            };
             $(window).resize(function () {
-                console.log('RESIZE');
             });
         }
         WallCtrl.prototype.injection = function () {
@@ -29,6 +31,9 @@ var wall;
                 'flickrServices', 
                 WallCtrl
             ];
+        };
+        WallCtrl.prototype.onLoadedImage = function () {
+            console.log("LOADED");
         };
         WallCtrl.prototype.submitSearch = function () {
             var tagWallItem = new wall.WallItem();
@@ -66,17 +71,18 @@ var wall;
                     i++;
                 }
             }
-            $('.masonry').masonry('remove', $('.' + value));
-            $('.masonry').masonry('reload');
+            var $masonry = $('.masonry');
+            $masonry.masonry('remove', $('.' + value)).masonry('reload');
         };
         WallCtrl.prototype.desactivateTopic = function (value) {
+            $('.masonry').masonry('reload');
             var searchTagItem = this.getSearchTagItemByLabel(value);
             if(searchTagItem.state == 'activate') {
                 searchTagItem.state = 'desactivate';
-                this.scope.topic = value;
+                this.scope.topic.push(value);
             } else {
                 searchTagItem.state = 'activate';
-                this.scope.topic = '';
+                this.scope.topic.splice(this.scope.topic.indexOf(value), 1);
             }
             console.log("desactivateTopic");
         };

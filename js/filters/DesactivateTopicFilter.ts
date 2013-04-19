@@ -25,20 +25,23 @@ module wall {
             return this.execute;
         }
 
-        execute(items : WallItem[], value : string = '') : any[] {
-            console.log("DesactivateTopicFilter : execute");
+        execute(items : WallItem[], values : String[] = []) : any[] {
+            //console.log("DesactivateTopicFilter : execute");
 
             var arr = [];
 
             var data = items;
             if(data == undefined) return arr;
             for(var i = 0; i < data.length; i++) {
-                if(data[i].searchTag != value) arr.push(data[i]);
+                if(values.indexOf(data[i].searchTag) == -1) arr.push(data[i]);
             }
             if(arr.length < items.length)
             {
-                $('.masonry').masonry('remove', $('.' + value));
-                $('.masonry').masonry('reload');
+                for(var j = 0; j < values.length; j++)
+                {
+                    //$('.masonry').masonry('remove', $('.' + values[j]));
+                    $('.masonry').masonry('reload');
+                }
             }
             return arr;
         }

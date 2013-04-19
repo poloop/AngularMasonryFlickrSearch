@@ -40,17 +40,15 @@ var wall;
             element.css({
                 opacity: 0
             });
-            element.html(this.$compile(element.html())($scope));
             var timeout = this.timeout;
-            element.parents('.masonry').masonry('appended', element, true);
-            element.imagesLoaded(function () {
-                timeout(function () {
+            $scope.onLoadTemplate = function () {
+                console.log("MasonryItemDirective :: onLoadTemplate " + $scope.wallItem.type);
+                if($scope.wallItem.type == "topic-item") {
                     element.css({
                         opacity: 1
                     });
-                    element.parents('.masonry').masonry('reload');
-                }, 1000);
-            });
+                }
+            };
         };
         MasonryItemDirective.prototype.linkFn = function ($scope, element, attributes) {
             console.log('MasonryItemDirective link');

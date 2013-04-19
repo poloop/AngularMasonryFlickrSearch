@@ -36,15 +36,21 @@ module wall {
             this.flickrServices = flickrServices;
             this.scope.searchTagItems = [];
 
-            this.scope.topic = '';
+            this.scope.topic = [];
             //this.refreshWall($scope);
 
             $scope.deleteTopic = (value: string) => this.deleteTopic(value);
             $scope.desactivateTopic = (value : string) => this.desactivateTopic(value);
             $scope.submitSearch = () => this.submitSearch();
+            $scope.onLoadedImage = () => this.onLoadedImage();
+            
             $(window).resize(function() {
-                console.log('RESIZE');
+                //console.log('RESIZE');
             })
+        }
+
+        onLoadedImage() {
+            console.log("LOADED");
         }
 
         submitSearch() {
@@ -89,24 +95,25 @@ module wall {
                     i++;
                 }
             }
-            $('.masonry').masonry('remove', $('.' + value));
-            $('.masonry').masonry('reload');
+            var $masonry = $('.masonry');
+            $masonry
+                .masonry('remove', $('.' + value))
+                .masonry('reload');
         }
 
         desactivateTopic(value: string) {
 
+            $('.masonry').masonry('reload');
             var searchTagItem = this.getSearchTagItemByLabel(value);
             if(searchTagItem.state == 'activate')
             {
                 searchTagItem.state = 'desactivate';
-                this.scope.topic = value;
+                this.scope.topic.push(value);
             } else
             {
                 searchTagItem.state = 'activate';
-                this.scope.topic = '';
+                this.scope.topic.splice(this.scope.topic.indexOf(value), 1);
             }
-            //$('.masonry').masonry('reload');
-            //this.filter('desactivateTopic')(this.scope.items, value);
             console.log("desactivateTopic");
         }
 

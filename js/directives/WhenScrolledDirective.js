@@ -17,11 +17,8 @@ var wall;
         };
         WhenScrolledDirective.prototype.linkFn = function ($scope, element, attributes) {
             var raw = element[0];
-            console.log('WhenScrolledDirective');
             $(window).bind('scroll', function () {
-                console.log('scroll ' + ' ' + $(window).scrollTop() + ' ' + $(window).height() + ' ' + raw.scrollHeight);
                 if($(window).scrollTop() + $(window).height() >= raw.scrollHeight) {
-                    console.log('WhenScrolledDirective apply');
                 }
             });
         };

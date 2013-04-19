@@ -17,6 +17,7 @@
 /// <reference path='services/FlickrServices.ts' />
 /// <reference path='directives/MasonryDirective.ts' />
 /// <reference path='directives/MasonryItemDirective.ts' />
+/// <reference path='directives/AddMasonryImageDirective.ts' />
 /// <reference path='directives/WhenScrolledDirective.ts' />
 /// <reference path='filters/DesactivateTopicFilter.ts' />
 /// <reference path='WallApp.ts' />
