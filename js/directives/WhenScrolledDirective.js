@@ -5,6 +5,7 @@
 * Time: 15:47
 * To change this template use File | Settings | File Templates.
 */
+/// <reference path='../_all.ts' />
 var wall;
 (function (wall) {
     'use strict';

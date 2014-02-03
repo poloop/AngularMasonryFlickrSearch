@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/// <reference path='../_all.ts' />
 module wall {
     'use strict';
 

@@ -45,7 +45,7 @@ module wall {
             $scope.onLoadedImage = () => this.onLoadedImage();
             
             $(window).resize(function() {
-                //console.log('RESIZE');
+                console.log('RESIZE');
             })
         }
 

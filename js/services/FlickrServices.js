@@ -1,25 +1,28 @@
+/**
+* Created with JetBrains WebStorm.
+* User: plong
+* Date: 19/03/13
+* Time: 17:53
+* To change this template use File | Settings | File Templates.
+*/
+/// <reference path='../_all.ts' />
 var wall;
 (function (wall) {
     'use strict';
+
     var FlickrServices = (function () {
         function FlickrServices($resource) {
             this.name = "FlickrServices";
-            this.resource = $resource('http://api.flickr.com/services/feeds/photos_public.gne', {
-                format: 'json',
-                jsoncallback: 'JSON_CALLBACK'
-            }, {
-                'get': {
-                    'method': 'JSONP'
-                }
-            });
+            this.resource = $resource('http://api.flickr.com/services/feeds/photos_public.gne', { format: 'json', jsoncallback: 'JSON_CALLBACK' }, { 'get': { 'method': 'JSONP' } });
             console.log("hip");
         }
         FlickrServices.prototype.injection = function () {
             return [
-                '$resource', 
+                '$resource',
                 FlickrServices
             ];
         };
+
         FlickrServices.prototype.get = function (search, successCallback) {
             console.log("FlickrServices :: get()");
             return this.resource.get(search, function (data) {
@@ -29,11 +32,12 @@ var wall;
                 console.log("FAIL");
             });
         };
+
         FlickrServices.prototype.getName = function () {
             return this.name;
         };
         return FlickrServices;
     })();
-    wall.FlickrServices = FlickrServices;    
+    wall.FlickrServices = FlickrServices;
 })(wall || (wall = {}));
-//@ sourceMappingURL=FlickrServices.js.map
+//# sourceMappingURL=FlickrServices.js.map

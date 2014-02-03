@@ -15,8 +15,14 @@ module wall {
         .directive('masonryItem', MasonryItemDirective.prototype.injection())
         .directive('whenScrolled', WhenScrolledDirective.prototype.injection())
         .directive('addMasonry', AddMasonryImageDirective.prototype.injection())
-        .filter('desactivateTopic', DesactivateTopicFilter.prototype.injection())
+        .filter('desactivateTopic', () => {
+            return(items, values) => {
+                return DesactivateTopicFilter.filter(items, values);
+            }
+        })
         .service('flickrServices', FlickrServices.prototype.injection())
         .controller('wallAppController', WallCtrl.prototype.injection());
+
+    //.filter('desactivateTopic', DesactivateTopicFilter.prototype.injection())
 }
 

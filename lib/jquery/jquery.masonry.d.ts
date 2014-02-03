@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-/// <reference path='jquery.d.ts' >
+/// <reference path="jquery.d.ts" />
 
 interface JQuery {
     masonry(option : any) : any;

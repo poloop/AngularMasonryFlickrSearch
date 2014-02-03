@@ -1,6 +1,15 @@
+/**
+* Created with JetBrains WebStorm.
+* User: plong
+* Date: 20/03/13
+* Time: 18:35
+* To change this template use File | Settings | File Templates.
+*/
+/// <reference path='../_all.ts' />
 var wall;
 (function (wall) {
     'use strict';
+
     var MasonryItemDirective = (function () {
         function MasonryItemDirective($compile, $timeout) {
             var _this = this;
@@ -14,15 +23,18 @@ var wall;
             this.compile = function (tElement, tAttributes, transclude) {
                 return _this.compileFn(tElement, tAttributes, transclude);
             };
+            //console.log('MasonryItemDirective');
         }
         MasonryItemDirective.prototype.injection = function () {
             return [
-                '$compile', 
-                '$timeout', 
+                '$compile',
+                '$timeout',
                 function ($compile, $timeout) {
                     return new MasonryItemDirective($compile, $timeout);
-                }            ];
+                }
+            ];
         };
+
         MasonryItemDirective.prototype.compileFn = function (tElement, tAttributes, transclude) {
             var _this = this;
             return {
@@ -34,27 +46,28 @@ var wall;
                 }
             };
         };
+
         MasonryItemDirective.prototype.preLinkFn = function ($scope, element, attributes) {
         };
+
         MasonryItemDirective.prototype.postLinkFn = function ($scope, element, attributes) {
-            element.css({
-                opacity: 0
-            });
+            element.css({ opacity: 0 });
+
+            //$('.masonry').masonry('appended', element, false);
             var timeout = this.timeout;
             $scope.onLoadTemplate = function () {
                 console.log("MasonryItemDirective :: onLoadTemplate " + $scope.wallItem.type);
-                if($scope.wallItem.type == "topic-item") {
-                    element.css({
-                        opacity: 1
-                    });
+                if ($scope.wallItem.type == "topic-item") {
+                    element.css({ opacity: 1 });
                 }
             };
         };
+
         MasonryItemDirective.prototype.linkFn = function ($scope, element, attributes) {
             console.log('MasonryItemDirective link');
         };
         return MasonryItemDirective;
     })();
-    wall.MasonryItemDirective = MasonryItemDirective;    
+    wall.MasonryItemDirective = MasonryItemDirective;
 })(wall || (wall = {}));
-//@ sourceMappingURL=MasonryItemDirective.js.map
+//# sourceMappingURL=MasonryItemDirective.js.map

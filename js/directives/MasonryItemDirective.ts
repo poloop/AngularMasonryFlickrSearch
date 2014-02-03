@@ -13,9 +13,9 @@ module wall {
     export class MasonryItemDirective {
 
         public restrict : string;
-        public transclude : bool;
+        public transclude : boolean;
         public link: ($scope : ng.IScope, element : JQuery, attributes : any) => any;
-        public compile: (tElement : JQuery, tAttributes : any, transclude : bool) => any;
+        public compile: (tElement : JQuery, tAttributes : any, transclude : boolean) => any;
 
         private $compile : ng.ICompileService;
         private timeout : ng.ITimeoutService;
@@ -41,7 +41,7 @@ module wall {
             //console.log('MasonryItemDirective');
         }
 
-        compileFn(tElement : JQuery, tAttributes : any, transclude : bool) {
+        compileFn(tElement : JQuery, tAttributes : any, transclude : boolean) {
             return {
                 pre : ($scope : any, iElement : JQuery, attributes : any) => this.preLinkFn($scope, iElement, attributes),
                 post : ($scope : any, iElement : JQuery, attributes : any) => this.postLinkFn($scope, iElement, attributes)

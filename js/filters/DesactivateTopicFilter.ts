@@ -10,8 +10,8 @@
 module wall {
     'use strict';
 
-    export class DesactivateTopicFilter{
-
+    export class DesactivateTopicFilter {
+        /*
         private scope: IWallScope;
 
         public injection(): any[] {
@@ -20,12 +20,11 @@ module wall {
             ]
         }
 
-        constructor(
-            ) {
+        constructor() {
             return this.execute;
         }
 
-        execute(items : WallItem[], values : String[] = []) : any[] {
+        execute(items : WallItem[], values : String[] = []) : WallItem[] {
             //console.log("DesactivateTopicFilter : execute");
 
             var arr = [];
@@ -34,6 +33,26 @@ module wall {
             if(data == undefined) return arr;
             for(var i = 0; i < data.length; i++) {
                 if(values.indexOf(data[i].searchTag) == -1) arr.push(data[i]);
+            }
+            if(arr.length < items.length)
+            {
+                for(var j = 0; j < values.length; j++)
+                {
+                    //$('.masonry').masonry('remove', $('.' + values[j]));
+                    $('.masonry').masonry('reload');
+                }
+            }
+            return arr;
+        }
+        */
+        static filter(items : WallItem[], values : String[] = []) : WallItem[] {
+            //console.log("DesactivateTopicFilter : execute");
+
+            var arr = [];
+
+            if(items == undefined) return arr;
+            for(var i = 0; i < items.length; i++) {
+                if(values.indexOf(items[i].searchTag) == -1) arr.push(items[i]);
             }
             if(arr.length < items.length)
             {

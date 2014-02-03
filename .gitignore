@@ -1,0 +1,6 @@
+# FOLDER TO IGNORE #
+####################
+
+.idea
+node_modules
+

@@ -5,7 +5,7 @@ module wall {
     export class AddMasonryImageDirective {
 
         public restrict : string;
-        public transclude : bool;
+        public transclude : boolean;
         public link: ($scope : ng.IScope, element : JQuery, attributes : any) => any;
 
         public injection(): any[]  {

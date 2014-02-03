@@ -1,6 +1,15 @@
+/**
+* Created with JetBrains WebStorm.
+* User: plong
+* Date: 18/03/13
+* Time: 16:58
+* To change this template use File | Settings | File Templates.
+*/
+/// <reference path='../_all.ts' />
 var wall;
 (function (wall) {
     'use strict';
+
     var WallCtrl = (function () {
         function WallCtrl($scope, $filter, flickrServices) {
             var _this = this;
@@ -8,7 +17,10 @@ var wall;
             this.filter = $filter;
             this.flickrServices = flickrServices;
             this.scope.searchTagItems = [];
+
             this.scope.topic = [];
+
+            //this.refreshWall($scope);
             $scope.deleteTopic = function (value) {
                 return _this.deleteTopic(value);
             };
@@ -21,51 +33,57 @@ var wall;
             $scope.onLoadedImage = function () {
                 return _this.onLoadedImage();
             };
+
             $(window).resize(function () {
+                console.log('RESIZE');
             });
         }
         WallCtrl.prototype.injection = function () {
             return [
-                '$scope', 
-                '$filter', 
-                'flickrServices', 
+                '$scope',
+                '$filter',
+                'flickrServices',
                 WallCtrl
             ];
         };
+
         WallCtrl.prototype.onLoadedImage = function () {
             console.log("LOADED");
         };
+
         WallCtrl.prototype.submitSearch = function () {
             var tagWallItem = new wall.WallItem();
             tagWallItem.type = "topic-item";
             tagWallItem.title = (this.scope.searchTag) ? this.scope.searchTag.toUpperCase() : "ANY";
             tagWallItem.template = "partials/wallTag.html";
             tagWallItem.searchTag = tagWallItem.title;
+
             var searchTagItem = new wall.SearchTagItem();
             searchTagItem.label = tagWallItem.title;
             this.scope.searchTagItems.push(searchTagItem);
-            if(!this.scope.items) {
-                this.scope.items = [
-                    tagWallItem
-                ];
+
+            if (!this.scope.items) {
+                this.scope.items = [tagWallItem];
             } else {
                 this.scope.items.push(tagWallItem);
             }
+
             this.refreshWall(this.scope, this.scope.searchTag);
         };
+
         WallCtrl.prototype.deleteTopic = function (value) {
             alert("DELETE " + value);
             var i = 0;
-            while(i < this.scope.items.length) {
-                if(this.scope.items[i].searchTag == value) {
+            while (i < this.scope.items.length) {
+                if (this.scope.items[i].searchTag == value) {
                     this.scope.items.splice(i, 1);
                 } else {
                     i++;
                 }
             }
             i = 0;
-            while(i < this.scope.searchTagItems.length) {
-                if(this.scope.searchTagItems[i].label == value) {
+            while (i < this.scope.searchTagItems.length) {
+                if (this.scope.searchTagItems[i].label == value) {
                     this.scope.searchTagItems.splice(i, 1);
                 } else {
                     i++;
@@ -74,10 +92,11 @@ var wall;
             var $masonry = $('.masonry');
             $masonry.masonry('remove', $('.' + value)).masonry('reload');
         };
+
         WallCtrl.prototype.desactivateTopic = function (value) {
             $('.masonry').masonry('reload');
             var searchTagItem = this.getSearchTagItemByLabel(value);
-            if(searchTagItem.state == 'activate') {
+            if (searchTagItem.state == 'activate') {
                 searchTagItem.state = 'desactivate';
                 this.scope.topic.push(value);
             } else {
@@ -86,39 +105,38 @@ var wall;
             }
             console.log("desactivateTopic");
         };
+
         WallCtrl.prototype.getSearchTagItemByLabel = function (value) {
-            for(var i = 0; i < this.scope.searchTagItems.length; i++) {
-                if(this.scope.searchTagItems[i].label == value) {
+            for (var i = 0; i < this.scope.searchTagItems.length; i++) {
+                if (this.scope.searchTagItems[i].label == value)
                     return this.scope.searchTagItems[i];
-                }
             }
             return undefined;
         };
+
         WallCtrl.prototype.getAllItems = function (successCallback, tags) {
             console.log(this.flickrServices.getName());
-            var result = this.flickrServices.get({
-                tags: tags
-            }, function (data) {
+            var result = this.flickrServices.get({ tags: tags }, function (data) {
                 successCallback(data);
             });
             console.log("hop " + result);
         };
+
         WallCtrl.prototype.refreshWall = function (scope, tags) {
             this.getAllItems(function (data) {
                 console.log(data);
-                for(var i = 0; i < data.items.length; i++) {
+                for (var i = 0; i < data.items.length; i++) {
                     data.items[i].template = "partials/wallItem.html";
                     data.items[i].searchTag = (tags) ? tags.toUpperCase() : "ANY";
                 }
-                if(!scope.items) {
+                if (!scope.items)
                     scope.items = data.items;
-                } else {
+                else
                     scope.items = scope.items.concat(data.items);
-                }
             }, tags);
         };
         return WallCtrl;
     })();
-    wall.WallCtrl = WallCtrl;    
+    wall.WallCtrl = WallCtrl;
 })(wall || (wall = {}));
-//@ sourceMappingURL=WallCtrl.js.map
+//# sourceMappingURL=WallCtrl.js.map

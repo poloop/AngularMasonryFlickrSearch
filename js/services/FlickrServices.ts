@@ -13,7 +13,7 @@ module wall {
 
     export class FlickrServices {
 
-        private resource : ng.resource.IResourceClass;
+        private resource : ng.resource.IResourceClass<any>;
 
         private name : string = "FlickrServices";
 

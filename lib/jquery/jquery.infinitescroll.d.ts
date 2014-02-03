@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-/// <reference path='jquery.d.ts' >
+/// <reference path="jquery.d.ts" />
 
 interface JQuery {
     infinitescroll(option : any, callback : (data : any, options ?: any) => void, element : JQuery) : any;
