@@ -15,7 +15,7 @@ module wall {
         items: WallItem[];
         searchTagItems : SearchTagItem[];
 
-        topic : string;
+        topic : string[];
 
         parse: ng.IParseService;
         compile: ng.ICompileService;
@@ -26,5 +26,6 @@ module wall {
         deleteTopic: (string) => void;
         desactivateTopic: (string) => void;
         filterBySearchTag: (string) => void;
+        onLoadedImage: () => void;
     }
 }

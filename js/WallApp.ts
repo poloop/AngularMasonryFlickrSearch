@@ -18,37 +18,5 @@ module wall {
         .filter('desactivateTopic', DesactivateTopicFilter.prototype.injection())
         .service('flickrServices', FlickrServices.prototype.injection())
         .controller('wallAppController', WallCtrl.prototype.injection());
-
-
-    /*wallApp.directive('masonry', function ($parse) {
-        return {
-            restrict: 'AC',
-            link: function (scope, elem, attrs) {
-                elem.masonry({ itemSelector: '.masonry-item', columnWidth: $parse(attrs.masonry)(scope) });
-            }
-        };
-    });*/
-    /*
-    wallApp.directive('masonryItem', function ($compile, $timeout) {
-        return {
-            restrict: 'AC',
-            link: function (scope : ng.IScope, elem : JQuery, attrs : any) {
-
-                elem.hide();
-                elem.html($compile(elem.html())(scope));
-                //elem.parents('.masonry').masonry('destroy');
-                elem.imagesLoaded(function () {
-                    $timeout(function() {
-                        //console.log('imageLoaded ' + elem.parent());
-                        elem.show();
-                        elem.parents('.masonry').masonry('reload');
-
-                    }, 2000);
-                });
-
-            }
-        };
-    });
-    */
 }
 

@@ -1,6 +1,14 @@
+/**
+* Created with JetBrains WebStorm.
+* User: plong
+* Date: 26/03/13
+* Time: 15:47
+* To change this template use File | Settings | File Templates.
+*/
 var wall;
 (function (wall) {
     'use strict';
+
     var WhenScrolledDirective = (function () {
         function WhenScrolledDirective() {
             var _this = this;
@@ -13,17 +21,24 @@ var wall;
             return [
                 function () {
                     return new WhenScrolledDirective();
-                }            ];
+                }
+            ];
         };
+
         WhenScrolledDirective.prototype.linkFn = function ($scope, element, attributes) {
             var raw = element[0];
+
+            //console.log('WhenScrolledDirective');
             $(window).bind('scroll', function () {
-                if($(window).scrollTop() + $(window).height() >= raw.scrollHeight) {
+                //console.log('scroll ' + ' ' + $(window).scrollTop() + ' ' + $(window).height() + ' ' + raw.scrollHeight);
+                if ($(window).scrollTop() + $(window).height() >= raw.scrollHeight) {
+                    //console.log('WhenScrolledDirective apply');
+                    //$scope.$apply(attributes.whenScrolled);
                 }
             });
         };
         return WhenScrolledDirective;
     })();
-    wall.WhenScrolledDirective = WhenScrolledDirective;    
+    wall.WhenScrolledDirective = WhenScrolledDirective;
 })(wall || (wall = {}));
-//@ sourceMappingURL=WhenScrolledDirective.js.map
+//# sourceMappingURL=WhenScrolledDirective.js.map
