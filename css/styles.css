@@ -46,11 +46,14 @@ body, html
     border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
-    -webkit-transition: all 1s ease;
-       -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-         -o-transition: all 1s ease;
-            transition: all 1s ease;
+    /*opacity: 0;*/
+
+    -webkit-transition: 1s ease background-color;
+       -moz-transition: 1s ease background-color;
+        -ms-transition: 1s ease background-color;
+         -o-transition: 1s ease background-color;
+            transition: 1s ease background-color;
+
 }
 
 .searchTagElement.activate
@@ -132,34 +135,19 @@ body, html
     -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
 }
 */
-.tagitem-enter-setup {
-    -webkit-transition: all 5s ease;
-       -moz-transition: all 5s ease;
-        -ms-transition: all 5s ease;
-         -o-transition: all 5s ease;
-            transition: all 5s ease;
+.searchTagElement.ng-enter,
+.searchTagElement.ng-leave {
+    -webkit-transition: 2s ease all;
+       -moz-transition: 2s ease all;
+        -ms-transition: 2s ease all;
+         -o-transition: 2s ease all;
+            transition: 2s ease all;
 }
 
-.tagitem-leave-setup {
-    -webkit-transition: all 5s ease;
-       -moz-transition: all 5s ease;
-        -ms-transition: all 5s ease;
-         -o-transition: all 5s ease;
-            transition: all 5s ease;
-}
-
-.tagitem-enter-setup {
-    opacity: 0;
-}
-
-.tagitem-enter-setup.tagitem-enter-start {
+.searchTagElement.ng-enter.searchTagElement.ng-enter-active.searchTagElement.ng-leave {
     opacity: 1;
 }
 
-.tagitem-leave-setup {
-    opacity: 1;
-}
-
-.tagitem-leave-setup.tagitem-leave-start {
+.searchTagElement.ng-leave.searchTagElement.ng-leave-active.searchTagElement.ng-enter {
     opacity: 0;
 }

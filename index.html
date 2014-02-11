@@ -3,7 +3,7 @@
 <head>
 
     <title>Wall Application</title>
-    <link rel="stylesheet" href="css/cssreset-min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <!--[if IE]>
     <script src="lib/ie.js"></script>
@@ -16,7 +16,7 @@
             <button class="btn" type="submit" value="search">SEARCH</button>
         </form>
         <div class="searchTagsContainer">
-            <div ng-repeat="searchTagItem in searchTagItems" ng-animate="{enter: 'tagitem-enter', leave: 'tagitem-leave'}" class="searchTagElement {{searchTagItem.state}}">
+            <div ng-repeat="searchTagItem in searchTagItems" class="searchTagElement {{searchTagItem.state}}">
                 <a href="" ng-click="desactivateTopic(searchTagItem.label)">{{searchTagItem.label}}</a>
                 <a href="" ng-click="deleteTopic(searchTagItem.label)">X</a>
             </div>
@@ -33,11 +33,14 @@
 <!--[if lt IE 8]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.4/json3.min.js"></script>
 <![endif]-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="lib/jquery/jquery.masonry.js"></script>
-<!--<script src="lib/jquery/jquery.nested.js"></script>-->
+<!--<script src="lib/masonry.pkgd.js"></script>
+<script src="lib/imagesloaded.pkgd.js"></script>-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
 <script src="http://code.angularjs.org/1.2.10/angular-resource.min.js"></script>
+
 <script src="js/controllers/WallCtrl.js"></script>
 <script src="js/models/WallModel.js"></script>
 <script src="js/directives/MasonryDirective.js"></script>

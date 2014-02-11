@@ -6,11 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-/// <reference path='../lib/jquery/jquery.d.ts' />
+/// <reference path='../typings/jquery/jquery.d.ts' />
 /// <reference path='../lib/jquery/jquery.masonry.d.ts' />
-/// <reference path='../lib/jquery/jquery.nested.d.ts' />
-/// <reference path='../lib/angular/angular.d.ts' />
-/// <reference path='../lib/angular/angular-resource.d.ts' />
+/// <reference path='../typings/angularjs/angular.d.ts' />
+/// <reference path='../typings/angularjs/angular-resource.d.ts' />
 /// <reference path='interfaces/IWallScope.ts' />
 /// <reference path='controllers/WallCtrl.ts' />
 /// <reference path='models/WallModel.ts' />

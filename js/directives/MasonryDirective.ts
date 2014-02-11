@@ -37,7 +37,28 @@ module wall {
 
             element.masonry({
                 itemSelector: '.masonry-item',
-                isFitWidth: true
+                isFitWidth: true,
+                /*
+                columnWidth: function( containerWidth ) {
+
+                    if($(".container").width() == 940) {
+                        return 240;
+                    }
+
+                    var width = $(window).width();
+                    var col = 300;
+
+                    if(width < 1200 && width >= 980) {
+                        col = 240;
+                    }
+                    else if(width < 980 && width >= 768) {
+                        col = 240;
+                    }
+
+                    return col;
+                }
+                */
+                columnWidth: 260
                 //columnWidth: this.parse(attributes.masonry)($scope)
                 //isAnimated: true
             });
